@@ -1,0 +1,13 @@
+.pogination {
+	display: flex;
+	.pogination__item {
+		margin: 0 10px;
+		.pogination__item--btn {
+			width: 8px;
+			height: 8px;
+			background-color: #212121;
+			opacity: 0.5;
+			border-radius: 50%;
+		}
+	}
+}

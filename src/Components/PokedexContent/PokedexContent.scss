@@ -1,0 +1,40 @@
+@use "../../style/Import.scss" as import;
+.Pokidex__container {
+	@include import.container();
+	margin-top: 70px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.PokedexContent {
+	padding-top: 90px;
+	flex-grow: 1;
+}
+.PokedexContent__title {
+	.PokedexContent__title--style {
+		@include import.KarlaNormal(#000000, calc(30px + (11 + 11 * 0.7) * ((100vw - 375px) / 1440)));
+		// calc(24px + (11 + 11 * 0.7) * ((100vw - 375px) / 1440))
+		span {
+			font-weight: bold;
+		}
+	}
+}
+.PokedexContent__filter {
+	width: 100%;
+	.PokedexContent__filter--serch {
+		margin: 34px 0 36px 0;
+	}
+	.PokedexContent__filter--dropdown {
+		display: flex;
+		justify-content: space-between;
+		width: 50%;
+	}
+}
+.PokedexContent__content {
+	.PokedexContent__content--list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

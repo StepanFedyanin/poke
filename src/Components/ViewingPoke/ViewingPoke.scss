@@ -1,0 +1,242 @@
+@use "../../style/Import.scss" as import;
+.ModalPoki {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(33, 33, 33, 0.5);
+	display: none;
+	z-index: 10;
+	&.active {
+		display: block;
+	}
+}
+
+.ModalPoki__container {
+	max-width: 800px;
+	max-height: 420px;
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+
+	.ModalPoki__hide {
+		height: fit-content;
+		margin-bottom: 5px;
+		width: 35px;
+		.ModalPoki__hide--btn {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+		}
+	}
+
+	.ModalPoki__container--content {
+		height: 100%;
+		box-shadow: 4px 4px 8px rgba(1, 28, 64, 0.2);
+		border-radius: 8px;
+	}
+}
+
+.ModalPoki__content {
+	display: flex;
+	height: 100%;
+	&.water {
+		background: linear-gradient(270deg, #73b8d6 0.15%, #9bc3d4 100%);
+	}
+
+	&.grass {
+		background: linear-gradient(270deg, #73d677 0.15%, #9ad19c 100%);
+	}
+
+	&.fire {
+		background: linear-gradient(270deg, #d93e30 0.15%, #b33327 100%);
+	}
+
+	&.flying {
+		background: linear-gradient(270deg, #94d3d6 0.15%, #d2fdff 100%);
+	}
+	&.bug {
+		background: linear-gradient(270deg, rgb(170, 209, 211) 0.15%, #ffe89e 100%);
+	}
+	&.normal {
+		background: linear-gradient(270deg, rgb(173, 210, 212) 0.15%, #c4f5f7 100%);
+	}
+	&.electric {
+		background: linear-gradient(270deg, #fdfb8c9c 0.15%, #fffc449c 100%);
+	}
+	&.ground {
+		background: linear-gradient(270deg, #f0dd9e 0.15%, #f3d264 100%);
+	}
+	&.fairy {
+		background: linear-gradient(270deg, #eee3fc 0.15%, #dfcbfa 100%);
+	}
+	&.poison {
+		background: linear-gradient(270deg, #c1ecc4 0.15%, #abf0ae 100%);
+	}
+
+	&--cover {
+		width: 40%;
+		box-shadow: 4px 4px 8px rgba(1, 28, 64, 0.2);
+		padding: 16px 0;
+	}
+
+	&--description {
+		width: 60%;
+		padding: 29px 20px 25px 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&.water {
+			background: linear-gradient(180deg, #62afd0 42.19%, #80b8d0 100%);
+		}
+
+		&.grass {
+			background: linear-gradient(180deg, #63d667 42.19%, #8cd08e 100%);
+		}
+
+		&.fire {
+			background: linear-gradient(180deg, #732119 42.19%, #d93e30 100%);
+		}
+
+		&.flying {
+			background: linear-gradient(180deg, #94d3d6 42.19%, #d2fdff 100%);
+		}
+		&.bug {
+			background: linear-gradient(180deg, #f7eac2 42.19%, #ffe89e 100%);
+		}
+		&.normal {
+			background: linear-gradient(180deg, #b5f6f8 42.19%, #a1f4f7 100%);
+		}
+		&.electric {
+			background: linear-gradient(180deg, #f9f79d9c 42.19%, #fdfa5c9c 100%);
+		}
+		&.ground {
+			background: linear-gradient(180deg, #f2dc95 42.19%, #f5d15b 100%);
+		}
+		&.fairy {
+			background: linear-gradient(180deg, #dcc7f9 42.19%, #c59ef7 100%);
+		}
+		&.poison {
+			background: linear-gradient(180deg, #aaedae 42.19%, #99f19d 100%);
+		}
+	}
+}
+.ModalPoki__cover--modifiers {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+.ModalPoki__description--info {
+	display: flex;
+	justify-content: space-between;
+	.ModalPoki__info--name {
+		.ModalPoki__name--style {
+			@include import.KarlaBold(#fdfdfd, 36px);
+		}
+	}
+	.ModalPoki__info--generation {
+		display: flex;
+		align-items: center;
+		.ModalPoki__generation--number {
+			margin-right: 8px;
+			.ModalPoki__generation--info {
+				@include import.KarlaNormal(#fdfdfd, 24px);
+			}
+		}
+		.ModalPoki__generation--meaning {
+			background: #f2cb07;
+			border-radius: 50%;
+			width: 41px;
+			height: 41px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.ModalPoki__meaning--id {
+				@include import.KarlaNormal(#000000, 16px);
+			}
+		}
+	}
+}
+.ModalPoki__description--abilities {
+	background: #fdfdfd;
+	box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+	border-radius: 8px;
+	padding: 15px 28px 7px;
+	.ModalPoki__abilities--title {
+		.ModalPoki__abilities--text {
+			@include import.KarlaNormal(#000000, 16px);
+		}
+	}
+	.ModalPoki__abilities--meaning {
+		.ModalPoki__abilities--dec {
+			@include import.KarlaNormal(#000000, 16px);
+		}
+	}
+}
+.ModalPoki__description--lvl {
+	background: #fdfdfd;
+	box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+	border-radius: 8px;
+	display: flex;
+	.ModalPoki__lvl--item {
+		width: 50%;
+		padding: 20px 18px 7px 18px;
+	}
+}
+.ModalPoki__description--characteristics {
+	display: flex;
+	justify-content: space-between;
+
+	.ModalPoki__characteristics--item {
+		padding: 8.3px 0;
+		width: 20%;
+		max-width: 82px;
+		background: #fdfdfd;
+		box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
+		border-radius: 8px;
+	}
+}
+@media (max-width: 376px) {
+	.ModalPoki__container {
+		height: 100vh;
+		width: 100vw;
+		max-width: none;
+		max-height: none;
+		border-radius: 16px;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		margin-right: 0;
+		transform: translate(0%, 0%);
+		.ModalPoki__hide {
+			top: 10px;
+			left: 10px;
+			position: absolute;
+			.ModalPoki__hide--btn {
+				display: flex;
+				justify-content: flex-end;
+				width: 100%;
+			}
+		}
+	}
+	.ModalPoki__content {
+		flex-direction: column;
+		align-items: center;
+		&--cover {
+			width: 60%;
+		}
+		&--description {
+			width: 100%;
+		}
+	}
+	.ModalPoki__description--info {
+		position: absolute;
+	}
+}

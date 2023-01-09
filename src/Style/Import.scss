@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Roboto&family=Source+Sans+Pro&display=swap");
+@mixin container() {
+	max-width: 1440px;
+	width: calc(100vw - 200px);
+	margin: 0 auto;
+	@media (max-width: 376px) {
+		width: calc(100vw - 50px);
+	}
+}
+@mixin KarlaBold($color, $fz) {
+	font-family: "Karla";
+	font-style: normal;
+	font-weight: 700;
+	font-size: $fz;
+	line-height: 1.5;
+	color: $color;
+}
+@mixin KarlaNormal($color, $fz) {
+	font-family: "Karla";
+	font-style: normal;
+	font-weight: 400;
+	font-size: $fz;
+	line-height: 1.5;
+	color: $color;
+}
+
+// @use "../../style/StyleImport.scss" as import;

@@ -1,0 +1,139 @@
+@use "../../style/Import.scss" as import;
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	.header__wrapper {
+		background: #f5db13;
+		box-shadow: 0px 4px 16px rgba(1, 28, 64, 0.2);
+	}
+	.header__container {
+		@include import.container();
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 14px 0 16px;
+		@media (max-width: 376px) {
+			padding: 22px 0 12;
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: center;
+			&.show {
+				align-items: center;
+			}
+		}
+	}
+
+	@media (max-width: 376px) {
+		&.back {
+			height: 100vh;
+			background: #21212180;
+		}
+		.header__wrapper {
+			background: linear-gradient(180deg, #f5db13 0%, #f2b807 100%);
+			box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
+			border-radius: 0px 0px 16px 16px;
+		}
+	}
+}
+
+.header__content {
+	width: 35%;
+	.header__nav {
+		width: 100%;
+		.header__nav--list {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	@media (max-width: 376px) {
+		height: 0;
+		transform: translateY(-100%);
+		overflow: hidden;
+		transition: all 0.5s;
+		width: 100%;
+		&.show {
+			height: 35vh;
+			transform: translateY(0%);
+			transition: all 0.5s;
+		}
+		.header__nav {
+			width: 100%;
+			height: 100%;
+			.header__nav--list {
+				flex-direction: column;
+				height: 100%;
+				align-items: center;
+				justify-content: space-evenly;
+			}
+		}
+	}
+}
+.header__logo {
+	max-width: 160px;
+	@media (max-width: 376px) {
+		width: 58px;
+		&.size {
+			width: 138px;
+		}
+	}
+}
+.header__list--item {
+	.header__item--active {
+		@include import.KarlaNormal(#000000, 25px);
+		border-bottom: 1px solid #000000;
+	}
+	.header__item--noactive {
+		@include import.KarlaNormal(#000000, 25px);
+	}
+
+	&:hover {
+		border-bottom: 1px solid #000000;
+	}
+}
+.header__burger {
+	display: none;
+}
+@media (max-width: 376px) {
+	.header__burger {
+		position: absolute;
+		top: 20px;
+		right: 26px;
+		width: 30px;
+		height: 22px;
+		display: block;
+		cursor: pointer;
+		&.hide {
+			display: none;
+		}
+		span {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 4.5px;
+			top: 8.7px;
+			background: #212121;
+			border-radius: 2px;
+		}
+
+		&::before,
+		&::after {
+			content: " ";
+			position: absolute;
+			width: 100%;
+			height: 4.5px;
+			background: #212121;
+			border-radius: 2px;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+	}
+}

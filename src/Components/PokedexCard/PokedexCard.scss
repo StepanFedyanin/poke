@@ -1,0 +1,77 @@
+@use "../../style/Import.scss" as import;
+.PokiCard {
+	width: 31%;
+	max-height: 25vh;
+	display: flex;
+	justify-content: space-between;
+	background: #f6f7f9;
+	border-radius: 8px;
+	position: relative;
+	filter: drop-shadow(4px 4px 4px rgba(33, 33, 33, 0.1));
+	margin: 2% 1%;
+	.PokiCard__info {
+		display: flex;
+		flex-direction: column;
+		padding: 5px 0 40px 25px;
+		width: 35%;
+		.poki__type {
+			position: absolute;
+			bottom: 11px;
+			display: flex;
+		}
+		&__img {
+			width: 60%;
+		}
+	}
+	@media (max-width: 376px) {
+		width: 100%;
+		margin: 3% 0;
+	}
+}
+.PokiCard__info__cover {
+	display: flex;
+	justify-content: center;
+	width: 65%;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	&.water {
+		background: #73b8d6;
+	}
+	&.grass {
+		background: #73d677;
+	}
+	&.fire {
+		background: #d68273;
+	}
+	&.flying {
+		background: #94d3d6;
+	}
+	&.bug {
+		background: #ffe89e;
+	}
+	&.normal {
+		background: #c4f5f7;
+	}
+	&.electric {
+		background: #fffc449c;
+	}
+	&.ground {
+		background: #f3d264;
+	}
+	&.fairy {
+		background: #dfcbfa;
+	}
+	&.poison {
+		background: #abf0ae;
+	}
+}
+.PokiCard__name {
+	margin-bottom: 12px;
+	.PokiCard__name--text {
+		@include import.KarlaBold(#212121, 18px);
+	}
+}
+.PokiCard__characteristics {
+	display: flex;
+	justify-content: space-between;
+}

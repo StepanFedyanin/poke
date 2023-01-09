@@ -1,0 +1,24 @@
+@use "../../Style/Import.scss" as import;
+.PokiCard__characteristics--item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.PokiCard__characteristics--meaning {
+		border: 3px solid #212121;
+		border-radius: 50%;
+		width: 37px;
+		height: 37px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 5px;
+		.PokiCard__meaning--text {
+			@include import.KarlaNormal(#212121, 15px);
+		}
+	}
+	.PokiCard__characteristics--name {
+		.PokiCard__name--text {
+			@include import.KarlaNormal(#4b4b4b, 12px);
+		}
+	}
+}

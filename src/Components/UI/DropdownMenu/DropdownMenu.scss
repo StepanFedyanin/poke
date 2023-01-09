@@ -1,0 +1,87 @@
+@use "../../../style/Import.scss" as import;
+
+.dropdown__list {
+	display: none;
+}
+
+.dropdown__list--Show {
+	margin: 8px 0 0 0;
+	position: absolute;
+	z-index: 5;
+	display: block;
+	background: #f2f2f2;
+	box-shadow: 4px 4px 8px rgba(1, 28, 64, 0.2);
+	border-radius: 8px;
+	width: 135px;
+	max-height: 131px;
+	overflow-y: scroll;
+	padding: 7px;
+
+	&::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #f2f2f2;
+		border-radius: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #ffffff;
+		border-radius: 30px;
+		border: 1px solid #000000;
+	}
+
+	.dropdown__list--nav {
+		margin: 0 auto;
+		width: min-content;
+	}
+}
+
+.dropdown__list--item {
+	margin: 8px 0;
+	position: relative;
+
+	.dropdown__item--label {
+		@include import.KarlaNormal(#000000, 16px);
+		padding-left: 20px;
+	}
+
+	.dropdown__item--input {
+		display: none;
+	}
+
+	.dropdown__item--label::after {
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		background: transparent;
+		border: 1px solid #212121;
+		transform: translate(-50%, -50%);
+		visibility: visible;
+		left: 5.5%;
+		top: 44.5%;
+	}
+
+	.dropdown__item--input:checked + .dropdown__item--label::after {
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		background: #d93e30;
+		border: 1px solid #212121;
+		transform: translate(-50%, -50%);
+		visibility: visible;
+		left: 5.5%;
+		top: 44.5%;
+	}
+}
+
+.dropdown__btn--style {
+	width: 135px;
+	background: #f2f2f2;
+	box-shadow: 2px 2px 2px rgba(33, 33, 33, 0.1);
+	border-radius: 4px;
+	@include import.KarlaNormal(#000000, 16px);
+}
