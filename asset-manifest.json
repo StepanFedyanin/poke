@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/poke/static/css/main.ca9babe7.css",
-    "main.js": "/poke/static/js/main.940b2d76.js",
+    "main.css": "/poke/static/css/main.c84be4d8.css",
+    "main.js": "/poke/static/js/main.454156ea.js",
+    "static/media/Team_Rocket.png": "/poke/static/media/Team_Rocket.47970b4926c9e88cd3ee.png",
+    "static/media/Error404.png": "/poke/static/media/Error404.95301e45675882a527b1.png",
+    "static/media/CoverHomeBg.svg": "/poke/static/media/CoverHomeBg.7519538a8c3777f6bad8.svg",
     "static/media/logo.svg": "/poke/static/media/logo.b396e2adf7ab8b851ab15e4caf3d79ba.svg",
     "index.html": "/poke/index.html",
     "static/media/closeIcon.svg": "/poke/static/media/closeIcon.50d7ff4dd90277d40daae6649cf063d2.svg",
-    "main.ca9babe7.css.map": "/poke/static/css/main.ca9babe7.css.map",
-    "main.940b2d76.js.map": "/poke/static/js/main.940b2d76.js.map"
+    "main.c84be4d8.css.map": "/poke/static/css/main.c84be4d8.css.map",
+    "main.454156ea.js.map": "/poke/static/js/main.454156ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca9babe7.css",
-    "static/js/main.940b2d76.js"
+    "static/css/main.c84be4d8.css",
+    "static/js/main.454156ea.js"
   ]
 }
