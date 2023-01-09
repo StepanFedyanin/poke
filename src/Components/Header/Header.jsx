@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Header.scss';
 import logo from '../../Resurces/Image/logo.svg'
+import { NavLink } from 'react-router-dom';
 function Header() {
 	const [burger, setBurger] = useState(false)
 	return (
@@ -14,19 +15,19 @@ function Header() {
 						<nav className='header__nav'>
 							<ul className='header__nav--list'>
 								<li className='header__list--item'>
-									{/* <NavLink to="/HomeContent" className={({ isActive }) => isActive ? "header__item--active" : "header__item--noactive"}> */}
-									Home
-									{/* </NavLink> */}
+									<NavLink to="/poke/index" className={({ isActive }) => isActive ? "header__item--active" : "header__item--noactive"}>
+										Home
+									</NavLink>
 								</li>
 								<li className='header__list--item'>
-									{/* <NavLink to="/PokedexContent" className={({ isActive }) => isActive ? "header__item--active" : "header__item--noactive"}> */}
-									Pokédex
-									{/* </NavLink> */}
+									<NavLink to="/poke/pokedex" className={({ isActive }) => isActive ? "header__item--active" : "header__item--noactive"}>
+										Pokédex
+									</NavLink>
 								</li>
 								<li className='header__list--item'>
-									{/* <NavLink to="/Varieties" className={({ isActive }) => isActive ? "header__item--active" : "header__item--noactive"}> */}
-									Varieties
-									{/* </NavLink> */}
+									<NavLink to="/poke/varieties" className={({ isActive }) => isActive ? "header__item--active" : "header__item--noactive"}>
+										Varieties
+									</NavLink>
 								</li>
 							</ul>
 						</nav>

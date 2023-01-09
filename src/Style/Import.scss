@@ -3,7 +3,7 @@
 	max-width: 1440px;
 	width: calc(100vw - 200px);
 	margin: 0 auto;
-	@media (max-width: 376px) {
+	@media (max-width: 576px) {
 		width: calc(100vw - 50px);
 	}
 }

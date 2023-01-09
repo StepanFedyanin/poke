@@ -1,0 +1,57 @@
+@use "../../style/Import.scss" as import;
+.homeContent {
+	background: url("../../Resurces/Image/CoverHomeBg.svg") no-repeat 100% 50%,
+		linear-gradient(180deg, #f5db13 0%, #f2b807 100%);
+	height: 100vh;
+	width: 100vw;
+	padding: 90px 0 0 0;
+	.homeContent__container {
+		@include import.container();
+		.homeContent__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 80%;
+			max-width: 516px;
+		}
+	}
+}
+.homeContent__content--title {
+	.homeContent__title--style {
+		@include import.KarlaNormal(#000000, calc(39px + (33 + 33 * 0.7) * ((100vw - 375px) / 1440)));
+		span {
+			font-weight: 700;
+		}
+	}
+}
+.homeContent__content--description {
+	.homeContent__description--style {
+		@include import.KarlaNormal(#000000, calc(24px + (8 + 8 * 0.7) * ((100vw - 375px) / 1440)));
+	}
+}
+.homeContent__content--button {
+	max-width: 231px;
+}
+@media (max-width: 576px) {
+	.homeContent {
+		background-size: contain;
+		background-position: 0% 15%;
+		height: 100vh;
+		width: 100vw;
+		padding: 90px 0 0 0;
+		.homeContent__container {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			.homeContent__content {
+				height: fit-content;
+				margin-bottom: 10vh;
+			}
+		}
+	}
+	.homeContent__content--button {
+		max-width: none;
+		margin-top: 5vh;
+	}
+}

@@ -3,7 +3,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	height: 10%;
-	@media (max-width: 376px) {
+	@media (max-width: 576px) {
 		flex-direction: column;
 	}
 }

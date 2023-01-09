@@ -1,0 +1,11 @@
+@use "../../../style/Import.scss" as import;
+.CastomButton {
+	@include import.KarlaBold(#212121, 21px);
+	border: none;
+	border-radius: 11px;
+	width: 100%;
+	padding: 8px 0;
+	&:hover {
+		filter: brightness(0.7);
+	}
+}

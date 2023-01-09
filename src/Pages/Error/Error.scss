@@ -1,0 +1,64 @@
+@use "../../style/Import.scss" as import;
+.PageNoFind {
+	height: 100%;
+	min-height: 100vh;
+	background: url("../../Resurces/Image/Error404.png"), #d93e30;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.PageNoFind__container {
+		@include import.container();
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&--cover {
+			max-width: 690px;
+			width: 48vw;
+		}
+		&--info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.PageNoFind__container--error {
+				// margin-bottom: 120px;
+				.PageNoFind__error--text {
+					@include import.KarlaBold(#f2f2f2, calc(25px + (23 + 23 * 0.7) * ((100vw - 375px) / 1440)));
+					// calc(25px + (23 + 23 * 0.7) * ((100vw - 375px) / 1440))
+					span {
+						color: #000000;
+					}
+				}
+			}
+			.PageNoFind__error--link {
+				width: 100%;
+				max-width: 230px;
+			}
+		}
+	}
+}
+@media (max-width: 576px) {
+	.PageNoFind {
+		height: 100%;
+		min-height: 100vh;
+		background: url("../../Resurces/Image/Error404.png"), #d93e30;
+		background-position: 0% 45%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		.PageNoFind__container {
+			&--cover {
+				max-width: none;
+				width: 75vw;
+				margin-bottom: 2vh;
+			}
+			&--info {
+				.PageNoFind__container--error {
+					max-width: 240px;
+					text-align: center;
+				}
+				.PageNoFind__error--link {
+					margin-top: 5vh;
+				}
+			}
+		}
+	}
+}
