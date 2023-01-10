@@ -4,6 +4,7 @@ const toolKitSlice = createSlice({
 	name: "pokedex",
 	initialState: {
 		pokiList: [],
+		loading: true,
 		params: {
 			limit: 9,
 			offset: 0
@@ -23,6 +24,9 @@ const toolKitSlice = createSlice({
 	reducers: {
 		changeList(state, action) {
 			state.pokiList = action.payload
+		},
+		changeLoading(state, action) {
+			state.loading = action.payload
 		},
 		changePagination(state, action) {
 			state.params.offset = state.params.offset + action.payload
@@ -48,6 +52,7 @@ const toolKitSlice = createSlice({
 export default toolKitSlice.reducer;
 export const {
 	changeList,
+	changeLoading,
 	changePagination,
 	changeCategoryListTitle,
 	changeCategoryListId,

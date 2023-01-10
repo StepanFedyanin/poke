@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useSelector } from "react-redux"
-import { changeCategoryListId, changeCategoryListTitle, changeCategoryWork, changeList } from "../Redux/Slice/ToolkitSlice"
+import { changeCategoryListId, changeCategoryListTitle, changeCategoryWork, changeList, changeLoading } from "../Redux/Slice/ToolkitSlice"
 
 export const getCategory = (pagination) => {
 	return function (dispath) {
@@ -26,6 +26,8 @@ export const GetCategoryPoke = (category, params) => {
 			.then(list => dispatch(changeCategoryListId(list)))
 			.then((item) => (newListCategory(item.payload, params, dispatch)))
 			.then(() => dispatch(changeCategoryWork(true)))
+			.then(() => dispatch(changeLoading(false)))
+
 	}
 
 }
@@ -34,7 +36,9 @@ export const newListCategory = (pokedexCategoryPoke, params, dispatch) => {
 	for (let index = params.offset, count = 0; count < params.limit; index++, count++) {
 		newPokeCatygory.push(pokedexCategoryPoke[index]);
 	}
-	dispatch(changeList(newPokeCatygory))
+	dispatch(changeList(newPokeCatygory));
+	dispatch(changeLoading(false))
+
 }
 
 

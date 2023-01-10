@@ -203,7 +203,7 @@
 		border-radius: 8px;
 	}
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 	.ModalPoki__container {
 		height: 100vh;
 		width: 100vw;
@@ -232,10 +232,11 @@
 		align-items: center;
 		justify-content: flex-end;
 		&--cover {
-			width: 90%;
+			width: 80%;
 			box-shadow: none;
 			position: absolute;
 			top: 5px;
+			max-width: 80vw;
 		}
 		&--description {
 			width: 100%;

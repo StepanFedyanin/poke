@@ -6,7 +6,7 @@ import PokedexList from '../PokedexList/PokedexList'
 import Serch from '../UI/Serch/Serch'
 import DropdownMenu from '../UI/DropdownMenu/DropdownMenu'
 import './PokedexContent.scss'
-import { changeList } from '../../Redux/Slice/ToolkitSlice'
+import { changeList, changeLoading } from '../../Redux/Slice/ToolkitSlice'
 import ViewingPoke from '../ViewingPoke/ViewingPoke'
 import Pagination from '../Pagination/Pagination'
 import FilterMenu from '../FilterMenu/FilterMenu'
@@ -26,6 +26,7 @@ function PokedexContent() {
 			newListCategory(pokedexCategoryPoke, params, dispatch)
 			:
 			dispatch(getPokiList(pagination));
+		dispatch(changeLoading(true))
 	}, [pagination])
 	return (
 		<div className='Pokidex__container'>

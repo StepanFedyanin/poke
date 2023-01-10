@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { GetCategoryPoke } from '../../../API/GetParamsPokedex';
 import { getPokiList } from '../../../API/GetPokedexList';
-import { changeCategoryWork, changePagination } from '../../../Redux/Slice/ToolkitSlice';
+import { changeCategoryWork, changeLoading, changePagination } from '../../../Redux/Slice/ToolkitSlice';
 import './DropdownMenu.scss'
 const ChangeDropMenu = (params) => {
 	const dispatch = useDispatch()
@@ -11,9 +11,12 @@ const ChangeDropMenu = (params) => {
 			return (
 				<div className='dropdown__list--items'>
 					<li key="allCetegory" className="dropdown__list--item" onClick={() => {
+						dispatch(changeLoading(false))
+
 						dispatch(getPokiList(params.offset));
 						dispatch(changeCategoryWork(false));
-						dispatch(changePagination(0))
+						dispatch(changePagination(0));
+
 					}}>
 						<input className="dropdown__item--input" type="radio" name="radio" id="allCetegory" />
 						<label className="dropdown__item--label" htmlFor="allCetegory">All</label>
@@ -21,7 +24,10 @@ const ChangeDropMenu = (params) => {
 					{
 						params.meaning.length != 0 ?
 							params.meaning.map(item =>
-								<li key={item} className="dropdown__list--item" onClick={() => dispatch(GetCategoryPoke(item, { offset: params.offset, limit: params.limit }))}>
+								<li key={item} className="dropdown__list--item" onClick={() => {
+									dispatch(GetCategoryPoke(item, { offset: params.offset, limit: params.limit }));
+									dispatch(changeLoading(true))
+								}}>
 									<input className="dropdown__item--input" type="radio" name="radio" id={item} />
 									<label className="dropdown__item--label" htmlFor={item}>{item}</label>
 								</li>

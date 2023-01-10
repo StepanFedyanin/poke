@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import './Pagination.scss'
-import { changePagination } from '../../Redux/Slice/ToolkitSlice';
+import { changeLoading, changePagination } from '../../Redux/Slice/ToolkitSlice';
 import { getPokiList } from '../../API/GetPokedexList';
 
 function Pagination() {
@@ -9,6 +9,7 @@ function Pagination() {
 	const pagination = useSelector(state => state.pokidex.params.offset);
 	const changeList = (value) => {
 		dispath(changePagination(value));
+		dispath(changeLoading(true))
 	}
 	return (
 		<div className="pogination">

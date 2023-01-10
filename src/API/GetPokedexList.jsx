@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useSelector } from "react-redux"
-import { changeList } from "../Redux/Slice/ToolkitSlice"
+import { changeList, changeLoading } from "../Redux/Slice/ToolkitSlice"
 
 export const getPokiList = (pagination) => {
 	return function (dispath) {
@@ -12,6 +12,7 @@ export const getPokiList = (pagination) => {
 		})
 			.then(response => getPoki(response.data))
 			.then(pokeList => dispath(changeList(pokeList)))
+			.then(() => dispath(changeLoading(false)))
 	}
 }
 const getPoki = async (pokiList) => {
