@@ -9,7 +9,7 @@ const ChangeDropMenu = (params) => {
 	switch (params.superstructure) {
 		case 'list':
 			return (
-				<div>
+				<div className='dropdown__list--items'>
 					<li key="allCetegory" className="dropdown__list--item" onClick={() => {
 						dispatch(getPokiList(params.offset));
 						dispatch(changeCategoryWork(false));
@@ -36,7 +36,7 @@ const ChangeDropMenu = (params) => {
 function DropdownMenu({ params, title }) {
 	const [showDropdown, setShowDropdown] = useState(false);
 	return (
-		<div className='dropdown'>
+		<div className='dropdown' onClick={(e) => e.stopPropagation()}>
 			<div className="dropdown__btn">
 				<button
 					className='dropdown__btn--style'

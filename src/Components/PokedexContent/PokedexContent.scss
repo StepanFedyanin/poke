@@ -1,7 +1,7 @@
 @use "../../style/Import.scss" as import;
 .Pokidex__container {
 	@include import.container();
-	margin-top: 70px;
+	margin-top: 100px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

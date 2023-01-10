@@ -1,0 +1,41 @@
+@use "../../Style/Import.scss" as import;
+.FilterMenu {
+	&__title {
+		display: none;
+	}
+}
+@media (max-width: 576px) {
+	.FilterMenu {
+		&__title {
+			display: block;
+			&--btn {
+				@include import.KarlaNormal(#000000, 16px);
+				width: 135px;
+				background: #f2f2f2;
+				box-shadow: 2px 2px 2px rgba(33, 33, 33, 0.1);
+				border-radius: 4px;
+			}
+		}
+		&__list {
+			transform: translateX(-100%);
+			transition: all 0.4s;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 15;
+			height: 100vh;
+			&.show {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 15;
+				height: 100vh;
+				background: #21212180;
+				transform: translateX(0%);
+				transition: all 0.4s;
+			}
+		}
+	}
+}

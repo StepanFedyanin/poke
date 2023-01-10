@@ -4,6 +4,8 @@
 	min-height: 100vh;
 	background: url("../../Resurces/Image/Error404.png"), #d93e30;
 	display: flex;
+	background-size: contain;
+	background-repeat: no-repeat;
 	justify-content: center;
 	align-items: center;
 	.PageNoFind__container {

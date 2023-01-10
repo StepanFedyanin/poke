@@ -9,12 +9,11 @@ import './PokedexContent.scss'
 import { changeList } from '../../Redux/Slice/ToolkitSlice'
 import ViewingPoke from '../ViewingPoke/ViewingPoke'
 import Pagination from '../Pagination/Pagination'
+import FilterMenu from '../FilterMenu/FilterMenu'
 function PokedexContent() {
 	const dispatch = useDispatch()
 	const pagination = useSelector(state => state.pokidex.params.offset);
-	const limit = useSelector(state => state.pokidex.params.limit);
 	const pokedexList = useSelector(state => state.pokidex.pokiList);
-	const pokedexCategory = useSelector(state => state.pokidex.category.categoryListTitle);
 	const CategoryChouse = useSelector(state => state.pokidex.category.categoryWork);
 	const params = useSelector(state => state.pokidex.params);
 	const pokedexCategoryPoke = useSelector(state => state.pokidex.category.categoryListId)
@@ -38,15 +37,7 @@ function PokedexContent() {
 					<Serch placeholder="name or id of the pokemon..." />
 				</div>
 				<div className="PokedexContent__filter--dropdown">
-					<DropdownMenu
-						title="All Category"
-						params={{
-							superstructure: 'list',
-							meaning: pokedexCategory,
-							offset: pagination,
-							limit: limit
-						}}
-					/>
+					<FilterMenu />
 				</div>
 			</div>
 			<PokedexList list={pokedexList} />

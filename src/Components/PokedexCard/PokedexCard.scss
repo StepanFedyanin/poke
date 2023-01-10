@@ -1,6 +1,6 @@
 @use "../../style/Import.scss" as import;
 .PokiCard {
-	width: 31%;
+	width: 32%;
 	max-height: 25vh;
 	display: flex;
 	justify-content: space-between;
@@ -8,12 +8,18 @@
 	border-radius: 8px;
 	position: relative;
 	filter: drop-shadow(4px 4px 4px rgba(33, 33, 33, 0.1));
-	margin: 2% 1%;
+	margin: 2% 0%;
 	.PokiCard__info {
 		display: flex;
 		flex-direction: column;
 		padding: 5px 0 40px 25px;
 		width: 35%;
+		@media (max-width: 1300px) {
+			width: 40%;
+		}
+		@media (max-width: 768px) {
+			width: 45%;
+		}
 		.poki__type {
 			position: absolute;
 			bottom: 11px;
@@ -21,7 +27,14 @@
 		}
 		&__img {
 			width: 60%;
+			@media (max-width: 1300px) {
+				width: 70%;
+			}
 		}
+	}
+	@media (max-width: 992px) {
+		width: 48%;
+		margin: 3% 1%;
 	}
 	@media (max-width: 576px) {
 		width: 100%;
@@ -34,6 +47,9 @@
 	width: 65%;
 	border-top-right-radius: 8px;
 	border-bottom-right-radius: 8px;
+	@media (max-width: 1300px) {
+		width: 60%;
+	}
 	&.water {
 		background: #73b8d6;
 	}
@@ -74,4 +90,5 @@
 .PokiCard__characteristics {
 	display: flex;
 	justify-content: space-between;
+	padding: 0 5px;
 }

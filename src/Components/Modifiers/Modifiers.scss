@@ -1,3 +1,4 @@
+@use "../../Style/Import.scss" as import;
 .poki__type--item {
 	box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
 	border-radius: 11px;
@@ -34,5 +35,6 @@
 	}
 	.poki__type--text {
 		padding: 2px 15px;
+		@include import.KarlaNormal(#212121, 12px);
 	}
 }

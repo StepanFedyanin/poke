@@ -23,7 +23,7 @@
 				@include import.KarlaNormal(#f2f2f2, calc(14px + (4 + 14 * 0.7) * ((100vw - 375px) / 1440)));
 			}
 		}
-		@media (max-width: 576px) {
+		@media (max-width: 768px) {
 			flex-direction: column-reverse;
 			align-items: center;
 			width: calc(100% - 8px);

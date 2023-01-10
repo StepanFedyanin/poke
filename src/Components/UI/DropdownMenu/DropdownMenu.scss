@@ -85,3 +85,41 @@
 	border-radius: 4px;
 	@include import.KarlaNormal(#000000, 16px);
 }
+@media (max-width: 576px) {
+	.dropdown {
+		background: linear-gradient(180deg, #f5db13 0%, #f2b807 100%);
+		box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
+		border-radius: 0px 0px 16px 16px;
+		height: 40vh;
+		padding: 20px 0;
+		.dropdown__list {
+			display: block;
+			width: calc(100vw - 90px);
+			margin: 0 auto;
+		}
+
+		.dropdown__list--Show {
+			position: static;
+			width: calc(100vw - 90px);
+			margin: 0 auto;
+		}
+	}
+	.dropdown__list--items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.dropdown__list--item {
+		width: 33%;
+	}
+	.dropdown__btn {
+		width: calc(100vw - 90px);
+		margin: 0 auto;
+		&--style {
+			background-color: transparent;
+			box-shadow: none;
+			border-radius: 0;
+			width: fit-content;
+			@include import.KarlaBold(#000000, 16px);
+		}
+	}
+}
