@@ -6,7 +6,7 @@ import PokedexContent from '../Components/PokedexContent/PokedexContent'
 
 function Pokedex() {
 	return (
-		<div>
+		<div className='wrapper'>
 			<Header />
 			<PokedexContent />
 			<Footer />

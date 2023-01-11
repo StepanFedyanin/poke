@@ -5,7 +5,7 @@ import IndexContent from '../Components/IndexContent/IndexContent'
 
 function Index() {
 	return (
-		<div>
+		<div className='wrapper'>
 			<Header />
 			<IndexContent />
 			<Footer position={true} />
