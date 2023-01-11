@@ -1,5 +1,4 @@
 import axios from "axios"
-import { useSelector } from "react-redux"
 import { changeList, changeLoading } from "../Redux/Slice/ToolkitSlice"
 
 export const getPokiList = (pagination) => {

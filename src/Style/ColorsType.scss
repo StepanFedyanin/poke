@@ -52,10 +52,6 @@
 .card-fairy {
 	background: #dfcbfa;
 }
-.card-unknown {
-}
-.card-shadow {
-}
 
 .modifiers-normal {
 	background: #c4f5f7;
@@ -110,10 +106,6 @@
 }
 .modifiers-fairy {
 	background: #dfcbfa;
-}
-.modifiers-unknown {
-}
-.modifiers-shadow {
 }
 
 .modal-water {
@@ -175,11 +167,91 @@
 	background: linear-gradient(270deg, #fa64289c 0.15%, #f675429c 100%);
 }
 .modal-dark {
-	background: linear-gradient(270deg, #2f2e2e9c 0.15%, #9c9a9a9c 100%);
+	background: linear-gradient(270deg, #2f2e2e 0.15%, #221f1f 100%);
 }
 .modal-unknown {
 	background: linear-gradient(270deg, #c1ecc4 0.15%, #94f299 100%);
 }
 .modal-shadow {
 	background: linear-gradient(270deg, #c1ecc4 0.15%, #98f09c 100%);
+}
+
+.description-water {
+	background: linear-gradient(180deg, #62afd0 42.19%, #80b8d0 100%);
+}
+
+.description-grass {
+	background: linear-gradient(180deg, #63d667 42.19%, #8cd08e 100%);
+}
+
+.description-fire {
+	background: linear-gradient(180deg, #732119 42.19%, #d93e30 100%);
+}
+
+.description-flying {
+	background: linear-gradient(180deg, #94d3d6 42.19%, #d2fdff 100%);
+}
+
+.description-bug {
+	background: linear-gradient(180deg, #f7eac2 42.19%, #ffe89e 100%);
+}
+
+.description-normal {
+	background: linear-gradient(180deg, #b5f6f8 42.19%, #a1f4f7 100%);
+}
+
+.description-electric {
+	background: linear-gradient(180deg, #f9f79d9c 42.19%, #fdfa5c9c 100%);
+}
+
+.description-ground {
+	background: linear-gradient(180deg, #f2dc95 42.19%, #f5d15b 100%);
+}
+
+.description-fairy {
+	background: linear-gradient(180deg, #dcc7f9 42.19%, #c59ef7 100%);
+}
+
+.description-poison {
+	background: linear-gradient(180deg, #aaedae 42.19%, #99f19d 100%);
+}
+//
+de.scription-fighting {
+	background: linear-gradient(270deg, #8af4f9 0.15%, #9cf4f9 100%);
+}
+
+.description-rock {
+	background: linear-gradient(270deg, #f9d96f 0.15%, #f3cc4e 100%);
+}
+
+.description-ghost {
+	background: linear-gradient(270deg, #94c2f9 0.15%, #5090de 100%);
+}
+
+.description-steel {
+	background: linear-gradient(270deg, #bbbbc2 0.15%, #6b6b71 100%);
+}
+
+.description-psychic {
+	background: linear-gradient(270deg, #f8d92b9c 0.15%, #fada239c 100%);
+}
+
+.description-ice {
+	background: linear-gradient(270deg, #438bf89c 0.15%, #5295f99c 100%);
+}
+
+.description-dragon {
+	background: linear-gradient(270deg, #fa64289c 0.15%, rgba(250, 126, 77, 0.612) 100%);
+}
+
+.description-dark {
+	background: linear-gradient(270deg, #434343 0.15%, #5d5858 100%);
+}
+
+.description-unknown {
+	background: linear-gradient(270deg, #c0f8c4 0.15%, #9cf6a2 100%);
+}
+
+.description-shadow {
+	background: linear-gradient(270deg, #b0f7b5 0.15%, #7ded82 100%);
 }

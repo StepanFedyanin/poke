@@ -29,7 +29,7 @@ const toolKitSlice = createSlice({
 			state.loading = action.payload
 		},
 		changePagination(state, action) {
-			state.params.offset = state.params.offset + action.payload
+			state.params.offset = state.params.offset + action.payload;
 		},
 		changeCategoryListTitle(state, action) {
 			state.category.categoryListTitle = action.payload

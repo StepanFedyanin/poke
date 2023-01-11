@@ -60,39 +60,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		&.water {
-			background: linear-gradient(180deg, #62afd0 42.19%, #80b8d0 100%);
-		}
-
-		&.grass {
-			background: linear-gradient(180deg, #63d667 42.19%, #8cd08e 100%);
-		}
-
-		&.fire {
-			background: linear-gradient(180deg, #732119 42.19%, #d93e30 100%);
-		}
-
-		&.flying {
-			background: linear-gradient(180deg, #94d3d6 42.19%, #d2fdff 100%);
-		}
-		&.bug {
-			background: linear-gradient(180deg, #f7eac2 42.19%, #ffe89e 100%);
-		}
-		&.normal {
-			background: linear-gradient(180deg, #b5f6f8 42.19%, #a1f4f7 100%);
-		}
-		&.electric {
-			background: linear-gradient(180deg, #f9f79d9c 42.19%, #fdfa5c9c 100%);
-		}
-		&.ground {
-			background: linear-gradient(180deg, #f2dc95 42.19%, #f5d15b 100%);
-		}
-		&.fairy {
-			background: linear-gradient(180deg, #dcc7f9 42.19%, #c59ef7 100%);
-		}
-		&.poison {
-			background: linear-gradient(180deg, #aaedae 42.19%, #99f19d 100%);
-		}
 	}
 }
 .ModalPoki__cover--modifiers {

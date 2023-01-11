@@ -1,5 +1,4 @@
 import axios from "axios"
-import { useSelector } from "react-redux"
 import { changeCategoryListId, changeCategoryListTitle, changeCategoryWork, changeList, changeLoading } from "../Redux/Slice/ToolkitSlice"
 
 export const getCategory = (pagination) => {

@@ -65,7 +65,7 @@ function ViewingPoke() {
 										}
 									</div>
 								</div>
-								<div className={"ModalPoki__content--description" + ' ' + ViewingModalPoke.types[0].type.name}>
+								<div className={"ModalPoki__content--description" + ' ' + 'description-' + ViewingModalPoke.types[0].type.name}>
 									<div className="ModalPoki__description--info">
 										<div className="ModalPoki__info--name">
 											<p className='ModalPoki__name--style'>{ViewingModalPoke.name}</p>

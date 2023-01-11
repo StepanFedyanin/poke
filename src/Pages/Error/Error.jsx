@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import CastomButton from '../../Components/UI/CastomButton/CastomButton'
-import './Error.scss'
 import Team_Rocket from '../../Resurces/Image/Team_Rocket.png'
+import './Error.scss'
 function Error() {
 	return (
 		<div className='PageNoFind'>

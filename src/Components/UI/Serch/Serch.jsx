@@ -17,7 +17,7 @@ function Serch({ placeholder }) {
 				<input className='serch__input--style' type="text" placeholder={placeholder} ref={inputSerch} onKeyDown={(e) => showSerchContent(e.keyCode)} />
 			</div>
 			<div className="serch__btn">
-				<button onClick={() => showSerchContent()}>
+				<button aria-label="search" onClick={() => showSerchContent()}>
 					<img src={serchIcon} alt="" />
 				</button>
 			</div>

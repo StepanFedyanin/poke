@@ -1,7 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import Pokedex from "../../Pages/Pokedex.jsx";
 import { store } from "../../Redux/store";
 import '../../Style/Reset.scss'
 import AppRouter from "../../Utils/AppRouter.jsx";
