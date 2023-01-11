@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/poke/static/css/main.3b2df116.css",
+    "main.css": "/poke/static/css/main.7c3d6429.css",
     "main.js": "/poke/static/js/main.4585b014.js",
     "static/media/loadingGif.gif": "/poke/static/media/loadingGif.89a700c4c6a8923319ed.gif",
     "static/media/Team_Rocket.png": "/poke/static/media/Team_Rocket.47970b4926c9e88cd3ee.png",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/poke/static/media/logo.b396e2adf7ab8b851ab15e4caf3d79ba.svg",
     "index.html": "/poke/index.html",
     "static/media/closeIcon.svg": "/poke/static/media/closeIcon.50d7ff4dd90277d40daae6649cf063d2.svg",
-    "main.3b2df116.css.map": "/poke/static/css/main.3b2df116.css.map",
+    "main.7c3d6429.css.map": "/poke/static/css/main.7c3d6429.css.map",
     "main.4585b014.js.map": "/poke/static/js/main.4585b014.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b2df116.css",
+    "static/css/main.7c3d6429.css",
     "static/js/main.4585b014.js"
   ]
 }
