@@ -236,7 +236,15 @@
 			box-shadow: none;
 			position: absolute;
 			top: 5px;
-			max-width: 80vw;
+			height: 40vh;
+			.ModalPoki__cover--photo {
+				height: 100%;
+				width: auto;
+				img {
+					height: 100%;
+					width: auto;
+				}
+			}
 		}
 		&--description {
 			width: 100%;
