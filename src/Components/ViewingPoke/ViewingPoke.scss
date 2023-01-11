@@ -1,7 +1,7 @@
 @use "../../style/Import.scss" as import;
 .ModalPoki {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -47,39 +47,6 @@
 .ModalPoki__content {
 	display: flex;
 	height: 100%;
-	&.water {
-		background: linear-gradient(270deg, #73b8d6 0.15%, #9bc3d4 100%);
-	}
-
-	&.grass {
-		background: linear-gradient(270deg, #73d677 0.15%, #9ad19c 100%);
-	}
-
-	&.fire {
-		background: linear-gradient(270deg, #d93e30 0.15%, #b33327 100%);
-	}
-
-	&.flying {
-		background: linear-gradient(270deg, #94d3d6 0.15%, #d2fdff 100%);
-	}
-	&.bug {
-		background: linear-gradient(270deg, rgb(170, 209, 211) 0.15%, #ffe89e 100%);
-	}
-	&.normal {
-		background: linear-gradient(270deg, rgb(173, 210, 212) 0.15%, #c4f5f7 100%);
-	}
-	&.electric {
-		background: linear-gradient(270deg, #fdfb8c9c 0.15%, #fffc449c 100%);
-	}
-	&.ground {
-		background: linear-gradient(270deg, #f0dd9e 0.15%, #f3d264 100%);
-	}
-	&.fairy {
-		background: linear-gradient(270deg, #eee3fc 0.15%, #dfcbfa 100%);
-	}
-	&.poison {
-		background: linear-gradient(270deg, #c1ecc4 0.15%, #abf0ae 100%);
-	}
 
 	&--cover {
 		width: 40%;

@@ -3,36 +3,6 @@
 	box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
 	border-radius: 11px;
 	margin: 0 6px;
-	&.water {
-		background: #73b8d6;
-	}
-	&.grass {
-		background: #73d677;
-	}
-	&.fire {
-		background: #d68273;
-	}
-	&.flying {
-		background: #94d3d6;
-	}
-	&.bug {
-		background: #ffe89e;
-	}
-	&.normal {
-		background: #c4f5f7;
-	}
-	&.electric {
-		background: #fffc449c;
-	}
-	&.ground {
-		background: #f3d264;
-	}
-	&.fairy {
-		background: #dfcbfa;
-	}
-	&.poison {
-		background: #abf0ae;
-	}
 	.poki__type--text {
 		padding: 2px 15px;
 		@include import.KarlaNormal(#212121, 12px);

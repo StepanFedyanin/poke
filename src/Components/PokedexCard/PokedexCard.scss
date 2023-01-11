@@ -50,64 +50,6 @@
 	@media (max-width: 1300px) {
 		width: 60%;
 	}
-	&.normal {
-		background: #c4f5f7;
-	}
-	&.fighting {
-		background: #bffcff;
-	}
-	&.flying {
-		background: #94d3d6;
-	}
-	&.poison {
-		background: #abf0ae;
-	}
-	&.ground {
-		background: #f3d264;
-	}
-	&.rock {
-		background: #b8a154;
-	}
-	&.bug {
-		background: #ffe89e;
-	}
-	&.ghost {
-		background: #6dacfa;
-	}
-	&.steel {
-		background: #99999a;
-	}
-	&.fire {
-		background: #d68273;
-	}
-	&.water {
-		background: #73b8d6;
-	}
-	&.grass {
-		background: #73d677;
-	}
-	&.electric {
-		background: #fffc449c;
-	}
-	&.psychic {
-		background: #fad8189c;
-	}
-	&.ice {
-		background: #3984f59c;
-	}
-	&.dragon {
-		background: #fa64289c;
-	}
-	&.dark {
-		background: #2f2e2e9c;
-	}
-	&.fairy {
-		background: #dfcbfa;
-	}
-	&.unknown {
-	}
-	&.shadow {
-	}
 }
 .PokiCard__name {
 	margin-bottom: 12px;

@@ -1,11 +1,14 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import Characteristics from '../Characteristics/Characteristics'
-import Modifiers from '../Modifiers/Modifiers'
-import ProgressBar from '../UI/ProgressBar/ProgressBar'
-import closeIcon from '../../Resurces/Image/closeIcon.svg'
-import './ViewingPoke.scss'
-import { changeModalLoading } from '../../Redux/Slice/ToolkitSlice'
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Characteristics from '../Characteristics/Characteristics';
+import Modifiers from '../Modifiers/Modifiers';
+import ProgressBar from '../UI/ProgressBar/ProgressBar';
+import closeIcon from '../../Resurces/Image/closeIcon.svg';
+import './ViewingPoke.scss';
+import '../../Style/ColorsType.scss';
+import loadingCardGif from '../../Resurces/GiF/loadingCardGif.png';
+import { changeModalLoading } from '../../Redux/Slice/ToolkitSlice';
+
 function ViewingPoke() {
 	const dispath = useDispatch();
 	const ViewingModalPoke = useSelector(state => state.pokidex.ViewingModalPoke.content);
@@ -14,21 +17,45 @@ function ViewingPoke() {
 	if (ViewingModalLoading) {
 		style.push('active');
 	}
+
+	if (ViewingModalLoading) {
+		document.body.style = 'overflow-y: hidden;'
+
+	}
+	const [loadUrl, setLoadUrl] = useState('')
+	useEffect(() => {
+		fetch(ViewingModalPoke.sprites.other.home.front_default)
+			.then(response => response.blob())
+			.then((img) => { setLoadUrl(URL.createObjectURL(img)) })
+	}, [ViewingModalPoke.sprites.other.home.front_default])
 	return (
-		<div className={style.join(' ')} onClick={() => dispath(changeModalLoading(false))}>
+		<div className={style.join(' ')} onClick={() => {
+			dispath(changeModalLoading(false));
+			document.body.style = 'overflow: none;'
+		}}>
 			<div className="ModalPoki__container" onClick={(e) => e.stopPropagation()}>
 				<div className="ModalPoki__hide">
-					<button className='ModalPoki__hide--btn' onClick={() => dispath(changeModalLoading(false))}>
+					<button className='ModalPoki__hide--btn' onClick={() => {
+						dispath(changeModalLoading(false));
+						document.body.style = 'overflow: none;'
+					}}>
 						<img src={closeIcon} alt="" />
 					</button>
 				</div>
 				<div className={"ModalPoki__container--content"}>
 					{
 						ViewingModalLoading ?
-							<div className={'ModalPoki__content' + " " + ViewingModalPoke.types[0].type.name}>
+							<div className={'ModalPoki__content' + " " + 'modal-' + ViewingModalPoke.types[0].type.name}>
 								<div className="ModalPoki__content--cover">
 									<div className="ModalPoki__cover--photo">
-										<img src={ViewingModalPoke.sprites.other.home.front_default} alt="" />
+										{
+											loadUrl ?
+												<img src={loadUrl} alt="" />
+												:
+												<img src={loadingCardGif} alt="" />
+
+
+										}
 									</div>
 									<div className="ModalPoki__cover--modifiers">
 										{

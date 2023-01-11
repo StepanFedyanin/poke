@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { getPokeModal } from '../../API/GetPokeModal'
-import Characteristics from '../Characteristics/Characteristics'
-import Modifiers from '../Modifiers/Modifiers'
-import './PokedexCard.scss'
-import loadingCardGif from '../../Resurces/GiF/loadingCardGif.png'
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { getPokeModal } from '../../API/GetPokeModal';
+import Characteristics from '../Characteristics/Characteristics';
+import Modifiers from '../Modifiers/Modifiers';
+import './PokedexCard.scss';
+import '../../Style/ColorsType.scss';
+import loadingCardGif from '../../Resurces/GiF/loadingCardGif.png';
 function PokedexCard({ id_card, img, name, attack, defanse, descriptiont }) {
 	const dispatch = useDispatch();
 	const [loadUrl, setLoadUrl] = useState('')
@@ -31,7 +32,7 @@ function PokedexCard({ id_card, img, name, attack, defanse, descriptiont }) {
 					}
 				</div>
 			</div>
-			<div className={'PokiCard__info__cover' + " " + descriptiont[0].type.name}>
+			<div className={'PokiCard__info__cover' + " " + 'card-' + descriptiont[0].type.name}>
 				<div className="PokiCard__info__img">
 					{
 						loadUrl ?

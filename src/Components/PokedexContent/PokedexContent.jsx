@@ -16,7 +16,9 @@ function PokedexContent() {
 	const pokedexList = useSelector(state => state.pokidex.pokiList);
 	const CategoryChouse = useSelector(state => state.pokidex.category.categoryWork);
 	const params = useSelector(state => state.pokidex.params);
-	const pokedexCategoryPoke = useSelector(state => state.pokidex.category.categoryListId)
+	const pokedexCategoryPoke = useSelector(state => state.pokidex.category.categoryListId);
+	const ViewingModalLoading = useSelector(state => state.pokidex.ViewingModalPoke.loading);
+
 	useEffect(() => {
 		dispatch(getPokiList(pagination))
 		dispatch(getCategory())
@@ -43,7 +45,13 @@ function PokedexContent() {
 			</div>
 			<PokedexList list={pokedexList} />
 			<Pagination />
-			<ViewingPoke />
+			{
+				ViewingModalLoading ?
+					< ViewingPoke />
+					:
+					null
+
+			}
 		</div>
 	)
 }

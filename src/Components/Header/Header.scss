@@ -20,8 +20,10 @@
 			flex-direction: column;
 			align-items: stretch;
 			justify-content: center;
+			height: 55px;
 			&.show {
 				align-items: center;
+				height: fit-content;
 			}
 		}
 	}
@@ -80,7 +82,7 @@
 .header__logo {
 	max-width: 160px;
 	@media (max-width: 576px) {
-		width: 58px;
+		width: 60px;
 		&.size {
 			width: 138px;
 		}
